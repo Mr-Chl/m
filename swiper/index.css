@@ -1,0 +1,244 @@
+@charset "utf-8";
+*{margin:0;padding:0}html{height:100%}
+body{height:100%;background:url(../images/shouye_nvsheng_bg.png);background-size:100% 100%}#header img{width:100%}
+.swiper-container{width:100%;-webkit-perspective:1200px;-moz-perspective:1200px;-ms-perspective:1200px;perspective:1200px}
+.swiper-wrapper{margin-top:10px}
+.swiper-slide{
+    width:80%;
+    height:150px;
+    margin:20px;
+    text-align:center;
+    line-height:150px;
+    font-size:50px;
+    color:#fff;
+    border-radius:20px;
+    transform:translate3D(20px);
+    -webkit-transform-style:preserve-3d;
+    -moz-transform-style:preserve-3d;
+    -ms-transform-style:preserve-3d;
+    transform-style:preserve-3d}
+.swiper-slide .main-img{
+    width:80%;
+    margin:0 auto;
+    display:block}
+#pagination{
+    position:absolute;
+    bottom:100px;width:100%}
+#pagination .swiper-pagination-bullet{
+    width:9.5%;float:left;
+    margin:0 0 0 6.15%;background:0;opacity:1}
+.swiper-pagination-bullet i{
+    background:#41203f;width:24px;
+    height:24px;line-height:24px;
+    font-size:12px;border-radius:50px;
+    display:block;font-style:normal;
+    text-align:center;margin:0 auto;color:#f5b55c}
+    .swiper-pagination-bullet-active i{
+        -webkit-transform:scale(1.5);background:url(../images/shouye_nvsheng_huangseb.png) no-repeat center 50%;
+        background-size:auto 100%;color:#815d4b}
+        @media screen and (min-height:481px){.swiper-wrapper{margin-top:20px}#pagination{bottom:110px}}
+        @media screen and (min-height:569px){.swiper-wrapper{margin-top:40px}#pagination{bottom:120px}
+        .swiper-pagination-bullet i{width:30px;height:30px;line-height:30px;font-size:15px}}
+        #footer{position:absolute;bottom:0}#footer img{width:100%;display:block}
+.vfinder-info a,
+.vfinder-info div  {
+    color: #dedede;
+}
+.vfinder-info *,
+.vfinder-code *
+{
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    background: transparent;
+}
+.vfinder-info > div {
+    padding: 4px 12px;
+}
+.vfinder-info > div:hover{
+    background: rgba(140, 140, 140, 0.36);
+}
+.vfinder-info {
+    position: fixed;
+    border-radius: 4px;
+    padding: 5px 0;
+    background: rgba(64, 64, 64, 0.9);
+
+/*    padding: 10px 18px;*/
+    z-index: 9999999;
+    border: 1px solid rgb(143, 143, 143);
+    font-size: 13px;
+}
+.vfinder-info:after{
+    position: absolute;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    -webkit-transform: rotate(45deg);
+    background: rgba(64, 64, 64, 0.9);
+    left: -5px;
+    top: 50%;
+    margin-top: -5px;
+}
+.vfinder-info-name-template{
+    color: #ff7474;
+}
+.vfinder-info-name-style{
+    color: #17ceff;
+}
+.vfinder-info-name-script{
+    color: #f281ff;
+}
+.vfinder-info-name-created{
+    color: #40c22a;
+}
+.vfinder-info-name-template,
+.vfinder-info-name-style,
+.vfinder-info-name-script,
+.vfinder-info-name-created{
+    display: inline-block;
+    width: 75px;
+}
+.vfinder-mask {
+    position: fixed;
+    z-index: 9999998;
+    background-color: rgba(1, 165, 255, 0.2);
+    pointer-events: none;
+}
+.vfinder-code{
+    position: fixed;
+/*    padding: 10px;*/
+/*    background: rgba(254, 255, 221, 0.9);*/
+    background: rgba(64, 64, 64, 0.9);
+    max-width: 400px;
+    font-size: 10px;
+    z-index: 10000000;
+    word-wrap: break-word;
+    border-radius: 4px;
+/*    color: #747474;*/
+    color: #dedede;
+    border: 1px solid rgba(222, 222, 222, 0.34);
+}
+.vfinder-path::-webkit-scrollbar,
+.vfinder-code-content::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+.vfinder-path::-webkit-scrollbar-thumb,
+.vfinder-code-content::-webkit-scrollbar-thumb {
+  background: rgba(103, 103, 103, 0.9);
+  border-radius: 4px;
+}
+.vfinder-path::-webkit-scrollbar-track,
+.vfinder-code-content::-webkit-scrollbar-track {
+  background: #ddd;
+  border-radius: 4px;
+}
+
+
+.vfinder-code-content{
+    padding: 0 10px;
+    overflow: auto;
+    max-height: 260px;
+}
+.vfinder-code-content p {
+    padding: 2px 6px 2px 0;
+}
+.vfinder-code-content > pre {
+    float: left;
+    clear: left;
+    white-space: nowrap;
+}
+.vfinder-current-code-line{
+    background: rgba(234, 102, 223, 0.25);
+    border-radius: 2px;
+}
+.vfinder-path{
+    padding: 10px;
+    border-bottom: 1px solid rgba(222, 222, 222, 0.34);
+    background: rgba(140, 140, 140, 0.36);
+    white-space:nowrap;
+    overflow-x: auto;
+}
+.vfinder-line-count{
+    color: #dedede;
+    min-width: 25px;
+    display: inline-block;
+}
+
+
+
+
+/*
+  IR_Black style (c) Vasily Mikhailitchenko <vaskas@programica.ru>
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #000;
+  color: #f8f8f8;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-meta {
+  color: #7c7c7c;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-tag,
+.hljs-name {
+  color: #96cbfe;
+}
+
+.hljs-attribute,
+.hljs-selector-id {
+  color: #ffffb6;
+}
+
+.hljs-string,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition {
+  color: #a8ff60;
+}
+
+.hljs-subst {
+  color: #daefa3;
+}
+
+.hljs-regexp,
+.hljs-link {
+  color: #e9c062;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-type,
+.hljs-doctag {
+  color: #ffffb6;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-literal {
+  color: #c6c5fe;
+}
+
+.hljs-number,
+.hljs-deletion {
+  color:#ff73fd;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
